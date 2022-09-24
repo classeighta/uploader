@@ -48,10 +48,10 @@ from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
     
     const dbref = ref(db);
     //Upload Hw
-    get(child(dbref, "/values/"))
+    get(child(dbref, "/values/hw"))
     .then((snapshot)=>{
         if(snapshot.exists()){
-             var bruh = snapshot.val().name ;
+             var bruh = snapshot.val().hw ;
              console.log(bruh);
              
              set(ref(db , "/values/hw/"), {
